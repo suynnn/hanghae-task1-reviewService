@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
 @Table
 @Getter
 @NoArgsConstructor
-public class Member {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "member_id")
+    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false, columnDefinition = "varchar(20)")

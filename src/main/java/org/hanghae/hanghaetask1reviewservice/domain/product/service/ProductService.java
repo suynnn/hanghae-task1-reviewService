@@ -1,11 +1,11 @@
-package org.hanghae.hanghaetask1reviewservice.service;
+package org.hanghae.hanghaetask1reviewservice.domain.product.service;
 
 import lombok.RequiredArgsConstructor;
-import org.hanghae.hanghaetask1reviewservice.dto.ProductRespDto;
-import org.hanghae.hanghaetask1reviewservice.entity.Product;
-import org.hanghae.hanghaetask1reviewservice.entity.Review;
-import org.hanghae.hanghaetask1reviewservice.repository.ProductRepository;
-import org.hanghae.hanghaetask1reviewservice.repository.ReviewRepository;
+import org.hanghae.hanghaetask1reviewservice.domain.product.dto.ProductRespDto;
+import org.hanghae.hanghaetask1reviewservice.domain.product.entity.Product;
+import org.hanghae.hanghaetask1reviewservice.domain.review.entity.Review;
+import org.hanghae.hanghaetask1reviewservice.domain.product.repository.ProductRepository;
+import org.hanghae.hanghaetask1reviewservice.domain.review.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

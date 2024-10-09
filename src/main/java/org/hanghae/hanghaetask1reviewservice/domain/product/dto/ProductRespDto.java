@@ -1,9 +1,10 @@
-package org.hanghae.hanghaetask1reviewservice.dto;
+package org.hanghae.hanghaetask1reviewservice.domain.product.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hanghae.hanghaetask1reviewservice.entity.Product;
-import org.hanghae.hanghaetask1reviewservice.entity.Review;
+import org.hanghae.hanghaetask1reviewservice.domain.review.dto.ReviewRespDto;
+import org.hanghae.hanghaetask1reviewservice.domain.product.entity.Product;
+import org.hanghae.hanghaetask1reviewservice.domain.review.entity.Review;
 
 import java.util.List;
 

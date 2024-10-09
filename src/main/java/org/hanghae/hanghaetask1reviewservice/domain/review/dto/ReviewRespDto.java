@@ -1,4 +1,4 @@
-package org.hanghae.hanghaetask1reviewservice.dto;
+package org.hanghae.hanghaetask1reviewservice.domain.review.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Getter;
 import lombok.Setter;
-import org.hanghae.hanghaetask1reviewservice.entity.Review;
+import org.hanghae.hanghaetask1reviewservice.domain.review.entity.Review;
 
 import java.time.LocalDateTime;
 

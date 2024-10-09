@@ -1,4 +1,4 @@
-package org.hanghae.hanghaetask1reviewservice.entity;
+package org.hanghae.hanghaetask1reviewservice.common.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QUser extends EntityPathBase<User> {
 
-    private static final long serialVersionUID = -1845501707L;
+    private static final long serialVersionUID = 693519572L;
 
     public static final QUser user = new QUser("user");
 

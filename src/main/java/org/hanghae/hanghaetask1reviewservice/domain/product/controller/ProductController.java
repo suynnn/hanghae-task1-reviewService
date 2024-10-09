@@ -1,9 +1,9 @@
-package org.hanghae.hanghaetask1reviewservice.controller;
+package org.hanghae.hanghaetask1reviewservice.domain.product.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.hanghae.hanghaetask1reviewservice.dto.ProductRespDto;
-import org.hanghae.hanghaetask1reviewservice.service.ProductService;
-import org.hanghae.hanghaetask1reviewservice.service.ReviewService;
+import org.hanghae.hanghaetask1reviewservice.domain.product.dto.ProductRespDto;
+import org.hanghae.hanghaetask1reviewservice.domain.product.service.ProductService;
+import org.hanghae.hanghaetask1reviewservice.domain.review.service.ReviewService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

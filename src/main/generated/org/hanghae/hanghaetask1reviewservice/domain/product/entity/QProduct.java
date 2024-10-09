@@ -1,4 +1,4 @@
-package org.hanghae.hanghaetask1reviewservice.entity;
+package org.hanghae.hanghaetask1reviewservice.domain.product.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QProduct extends EntityPathBase<Product> {
 
-    private static final long serialVersionUID = 372756357L;
+    private static final long serialVersionUID = 2072865068L;
 
     public static final QProduct product = new QProduct("product");
 

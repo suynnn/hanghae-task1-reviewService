@@ -1,9 +1,11 @@
-package org.hanghae.hanghaetask1reviewservice.entity;
+package org.hanghae.hanghaetask1reviewservice.domain.review.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hanghae.hanghaetask1reviewservice.domain.product.entity.Product;
+import org.hanghae.hanghaetask1reviewservice.common.entity.User;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 

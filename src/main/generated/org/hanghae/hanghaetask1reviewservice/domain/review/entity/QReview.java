@@ -1,4 +1,4 @@
-package org.hanghae.hanghaetask1reviewservice.entity;
+package org.hanghae.hanghaetask1reviewservice.domain.review.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -16,7 +16,7 @@ import com.querydsl.core.types.dsl.PathInits;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QReview extends EntityPathBase<Review> {
 
-    private static final long serialVersionUID = 196037122L;
+    private static final long serialVersionUID = -662386026L;
 
     private static final PathInits INITS = PathInits.DIRECT2;
 
@@ -30,11 +30,11 @@ public class QReview extends EntityPathBase<Review> {
 
     public final StringPath imageUrl = createString("imageUrl");
 
-    public final QProduct product;
+    public final org.hanghae.hanghaetask1reviewservice.domain.product.entity.QProduct product;
 
     public final NumberPath<Integer> score = createNumber("score", Integer.class);
 
-    public final QUser user;
+    public final org.hanghae.hanghaetask1reviewservice.common.entity.QUser user;
 
     public QReview(String variable) {
         this(Review.class, forVariable(variable), INITS);
@@ -54,8 +54,8 @@ public class QReview extends EntityPathBase<Review> {
 
     public QReview(Class<? extends Review> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.product = inits.isInitialized("product") ? new QProduct(forProperty("product")) : null;
-        this.user = inits.isInitialized("user") ? new QUser(forProperty("user")) : null;
+        this.product = inits.isInitialized("product") ? new org.hanghae.hanghaetask1reviewservice.domain.product.entity.QProduct(forProperty("product")) : null;
+        this.user = inits.isInitialized("user") ? new org.hanghae.hanghaetask1reviewservice.common.entity.QUser(forProperty("user")) : null;
     }
 
 }

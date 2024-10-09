@@ -1,11 +1,11 @@
-package org.hanghae.hanghaetask1reviewservice.repository;
+package org.hanghae.hanghaetask1reviewservice.domain.review.repository;
 
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
-import org.hanghae.hanghaetask1reviewservice.entity.QReview;
-import org.hanghae.hanghaetask1reviewservice.entity.Review;
+import org.hanghae.hanghaetask1reviewservice.domain.review.entity.QReview;
+import org.hanghae.hanghaetask1reviewservice.domain.review.entity.Review;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.SliceImpl;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class ReviewCustomRepositoryImpl implements ReviewCustomRepository{
+public class ReviewCustomRepositoryImpl implements ReviewCustomRepository {
 
     private final JPAQueryFactory jpaQueryFactory;
 

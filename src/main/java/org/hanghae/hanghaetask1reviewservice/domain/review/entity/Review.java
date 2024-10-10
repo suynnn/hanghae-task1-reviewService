@@ -5,7 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hanghae.hanghaetask1reviewservice.domain.product.entity.Product;
-import org.hanghae.hanghaetask1reviewservice.common.entity.User;
+import org.hanghae.hanghaetask1reviewservice.common.user.entity.User;
+import org.hanghae.hanghaetask1reviewservice.domain.review.dto.ReviewReqDto;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -46,4 +47,13 @@ public class Review {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="user_id", nullable = false)
     private User user;
+
+    public void publishReview(ReviewReqDto reviewReqDto, String imageUrl, Product product, User user) {
+        this.score = reviewReqDto.getScore();
+        this.content = reviewReqDto.getContent();
+        this.imageUrl = imageUrl;
+        this.createdAt = LocalDateTime.now();
+        this.product = product;
+        this.user = user;
+    }
 }

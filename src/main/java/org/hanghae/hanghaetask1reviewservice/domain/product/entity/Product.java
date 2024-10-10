@@ -20,4 +20,16 @@ public class Product {
 
     @Column(nullable = false)
     private Float score;
+
+    public void updateProduct(int newScore) {
+
+        Float sumScore = this.score * reviewCount;
+
+        reviewCount += 1;
+        sumScore += newScore;
+
+        float updatedScore = sumScore / reviewCount;
+        this.score = Math.round(updatedScore * 100) / 100f;
+
+    }
 }

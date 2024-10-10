@@ -3,6 +3,7 @@ package org.hanghae.hanghaetask1reviewservice.domain.product.service;
 import lombok.RequiredArgsConstructor;
 import org.hanghae.hanghaetask1reviewservice.domain.product.dto.ProductRespDto;
 import org.hanghae.hanghaetask1reviewservice.domain.product.entity.Product;
+import org.hanghae.hanghaetask1reviewservice.domain.product.exception.ProductNotFoundException;
 import org.hanghae.hanghaetask1reviewservice.domain.review.entity.Review;
 import org.hanghae.hanghaetask1reviewservice.domain.product.repository.ProductRepository;
 import org.hanghae.hanghaetask1reviewservice.domain.review.repository.ReviewRepository;
@@ -21,7 +22,7 @@ public class ProductService {
 
     public ProductRespDto findProductByProductId(long productId, long cursor, int size) {
 
-        Product product = productRepository.findById(productId).orElseThrow();
+        Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException("해당 productId에 해당하는 Product를 찾을 수 없습니다."));
         List<Review> reviewList = reviewRepository.findReviewsByProductId(productId, cursor, size).getContent();
 
         return new ProductRespDto(product, cursor, reviewList);

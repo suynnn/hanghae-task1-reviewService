@@ -34,7 +34,7 @@ public class QReview extends EntityPathBase<Review> {
 
     public final NumberPath<Integer> score = createNumber("score", Integer.class);
 
-    public final org.hanghae.hanghaetask1reviewservice.common.entity.QUser user;
+    public final org.hanghae.hanghaetask1reviewservice.common.user.entity.QUser user;
 
     public QReview(String variable) {
         this(Review.class, forVariable(variable), INITS);
@@ -55,7 +55,7 @@ public class QReview extends EntityPathBase<Review> {
     public QReview(Class<? extends Review> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.product = inits.isInitialized("product") ? new org.hanghae.hanghaetask1reviewservice.domain.product.entity.QProduct(forProperty("product")) : null;
-        this.user = inits.isInitialized("user") ? new org.hanghae.hanghaetask1reviewservice.common.entity.QUser(forProperty("user")) : null;
+        this.user = inits.isInitialized("user") ? new org.hanghae.hanghaetask1reviewservice.common.user.entity.QUser(forProperty("user")) : null;
     }
 
 }

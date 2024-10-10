@@ -1,4 +1,4 @@
-package org.hanghae.hanghaetask1reviewservice.common.entity;
+package org.hanghae.hanghaetask1reviewservice.common.user.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -35,7 +35,7 @@ public class ReviewService {
             throw new ReviewAlreadyExistsException("해당 상품에 대한 리뷰는 이미 작성한 상태입니다. 더 이상 작성하실 수 없습니다.");
         }
 
-        Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException("해당 productId에 해당하는 Product를 찾을 수 없습니다."));
+        Product product = productRepository.findByIdWithLock(productId).orElseThrow(() -> new ProductNotFoundException("해당 productId에 해당하는 Product를 찾을 수 없습니다."));
         User user = userRepository.findById(reviewReqDto.getUserId()).orElseThrow();
 
         String imageUrl = s3Service.uploadFile(imageFile);

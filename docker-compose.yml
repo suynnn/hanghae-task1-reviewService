@@ -19,18 +19,18 @@ services:
     networks:
       - my-hanghae-task1-network
 
-#  spring:
-#    build:
-#      dockerfile: ./Dockerfile
-#    restart: always
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    ports:
-#      - 8080:8080
-#    depends_on:
-#      - mysql
-#    networks:
-#      - my-hanghae-task1-network
+  spring:
+    build:
+      dockerfile: ./Dockerfile
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+    networks:
+      - my-hanghae-task1-network
 
 volumes:
   mysql_data:
